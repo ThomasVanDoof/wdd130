@@ -24,8 +24,12 @@ header, main {
 }
 
 h1, h2 {
-    font-family: var(--text-color);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: var(--accent-color2);
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav, p, section, article {
@@ -62,6 +66,11 @@ social-links {
     font-size: 3em;
     text-align: center;
     width: 100%;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
 }
 
 footer {
