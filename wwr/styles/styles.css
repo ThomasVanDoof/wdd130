@@ -55,22 +55,36 @@ social-links {
     display: block;
 }
 
-.hero h1 {
+.hero h1,
+.hero article {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5); /* translucent background */
+    transform: translateX(-50%);
     color: white;
-    font-size: 3em;
     text-align: center;
     width: 100%;
 }
 
+.hero h1 {
+    top: 40%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3em;
+}
+
+.hero article {
+    top: 60%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+}
+
+/* Floats the image in the hero article to the right */
 .hero article img {
     float: right;
     width: 125px;
+    margin-left: 16px;
+    margin-bottom: 8px;
 }
 
 footer {
@@ -83,9 +97,11 @@ footer {
     color: var(--text-color);
 }
 
+/* Removes underline from social media icon links in the footer */
 footer nav a {
     margin: 0 10px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .quadrant-grid {
