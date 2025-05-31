@@ -1,109 +1,161 @@
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 5%;
-    background-color: var(--secondary-color);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+:root {
+    --primary-color: #1d7874;
+    --secondary-color: #071e22;
+    --accent-color: #EE2E31;
+    --accent-color2: #F4C095;
+    --text-color: #cfcfb4;
 }
 
-.main-header nav {
-    display: flex;
-    gap: 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.main-header nav a {
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+header, main {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: var(--accent-color2);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
 }
 
-#logo {
-    width: 120px;
-    height: auto;
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+social-links {
+    text-decoration: none;
 }
 
 .hero {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
-    margin-top: 80px; /* offset for fixed header */
 }
 
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.hero .overlay {
+.hero h1,
+.hero article {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
+    text-align: center;
+    width: 100%;
 }
 
-.hero .overlay p {
-    width: 50%;
-    font-size: 1.5em;
+.hero h1 {
+    top: 40%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3em;
 }
 
-.hero .overlay img {
-    width: 40%;
-    max-height: 80%;
-    object-fit: cover;
+.hero article {
+    top: 60%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
 }
 
-.center-image-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 5%;
-    gap: 20px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
-.center-image-section img {
-    width: 150px;
-    height: auto;
-}
-
-.side-text {
-    width: 35%;
-    font-size: 1.1em;
-}
-
-.five-images {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 40px 0;
-    background-color: var(--secondary-color);
-}
-
-.five-images img {
-    width: 160px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
+/* Floats the image in the hero article to the right */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    margin-bottom: 8px;
 }
 
 footer {
-    background-color: var(--accent-color);
-    padding: 16px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     text-align: center;
+    padding: 16px;
+    background-color: var(--accent-color);
     color: var(--text-color);
+}
+
+/* Removes underline from social media icon links in the footer */
+footer nav a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.quadrant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    grid-auto-rows: 160px;
+    position: relative;
+}
+
+.quadrant-grid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.quadrant-grid .center-img {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 60%;
+}
+
+header {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: var(--secondary-color);
+    color: var(--accent-color2);
+    padding: 24px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: var(--accent-color2);     
+    text-decoration: none;           
+    margin: 0 18px;                  
+    font-weight: bold;                
+    font-size: 1.1em;                 
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: var(--accent-color);      
+}
+
+.main-hero-img {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
 }
