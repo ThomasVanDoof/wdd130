@@ -1,161 +1,99 @@
-:root {
-    --primary-color: #1d7874;
-    --secondary-color: #071e22;
-    --accent-color: #EE2E31;
-    --accent-color2: #F4C095;
-    --text-color: #cfcfb4;
+/* HEADER layout fix */
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 5%;
+    background-color: #d6c1f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.main-header nav {
+    display: flex;
+    gap: 20px;
+    margin-right: auto;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-color);
-    background-color: var(--primary-color);
+.main-header nav a {
+    background-color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-header, main {
-    width: 840px;
-    margin: 0 auto;
+.main-header #logo {
+    width: 100px;
+    height: auto;
 }
 
-h1, h2 {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+/* HERO overlay layout */
+.overlay-container {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 24px;
+    max-width: 90%;
+    border-radius: 12px;
+}
+
+.overlay-container .hero-text {
+    color: white;
+    max-width: 500px;
+}
+
+.overlay-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+}
+
+.overlay-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Centered Section */
+.centered-callout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 5%;
+    background-color: var(--secondary-color);
     color: var(--accent-color2);
 }
 
-p {
-    font-family: 'Times New Roman', Times, serif;
+.centered-callout img {
+    width: 150px;
+    height: auto;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-social-links {
-    text-decoration: none;
-}
-
-.hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hero h1,
-.hero article {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-.hero h1 {
-    top: 40%;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3em;
-}
-
-.hero article {
-    top: 60%;
-    padding: 12px;
-    background-color: rgba(0, 0, 0, 0.3);
+.centered-callout .side-text {
+    width: 30%;
     font-size: 1.2em;
 }
 
-/* Floats the image in the hero article to the right */
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 16px;
-    margin-bottom: 8px;
+/* Horizontal Gallery */
+.horizontal-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
 }
 
-footer {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    text-align: center;
-    padding: 16px;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-}
-
-/* Removes underline from social media icon links in the footer */
-footer nav a {
-    margin: 0 10px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.quadrant-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-width: 500px;
-    margin: 0 auto;
-    grid-auto-rows: 160px;
-    position: relative;
-}
-
-.quadrant-grid img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-.quadrant-grid .center-img {
-    grid-column: 1 / 3;
-    justify-self: center;
-    width: 60%;
-}
-
-header {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    background-color: var(--secondary-color);
-    color: var(--accent-color2);
-    padding: 24px 0;
-    text-align: center;
-}
-
-header nav a {
-    color: var(--accent-color2);     
-    text-decoration: none;           
-    margin: 0 18px;                  
-    font-weight: bold;                
-    font-size: 1.1em;                 
-    transition: color 0.2s;
-}
-
-header nav a:hover {
-    color: var(--accent-color);      
-}
-
-.main-hero-img {
-    width: 100vw;
-    max-width: 100vw;
+.horizontal-gallery img {
+    width: 150px;
     height: auto;
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
+    border-radius: 8px;
+    margin: 8px;
 }
