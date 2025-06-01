@@ -79,7 +79,7 @@ social-links {
     font-size: 1.2em;
 }
 
-/* Floats the image in the hero article to the right */
+
 .hero article img {
     float: right;
     width: 125px;
@@ -97,7 +97,7 @@ footer {
     color: var(--text-color);
 }
 
-/* Removes underline from social media icon links in the footer */
+
 footer nav a {
     margin: 0 10px;
     display: inline-block;
@@ -106,9 +106,9 @@ footer nav a {
 
 .quadrant-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
     grid-auto-rows: 160px;
     position: relative;
@@ -123,9 +123,9 @@ footer nav a {
 }
 
 .quadrant-grid .center-img {
-    grid-column: 1 / 3;
+    grid-column: auto;
     justify-self: center;
-    width: 60%;
+    width: 100%;
 }
 
 header {
