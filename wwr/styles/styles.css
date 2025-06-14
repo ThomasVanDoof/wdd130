@@ -3,7 +3,7 @@
     --secondary-color: #071e22;
     --accent-color: #EE2E31;
     --accent-color2: #F4C095;
-    --text-color: #cfcfb4;
+    --text-color: #cae0e2;
 }
 
 * {
@@ -25,7 +25,7 @@ header, main {
 
 h1, h2 {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    color: var(--accent-color2);
+    color: var(#c3deeb);
 }
 
 p {
