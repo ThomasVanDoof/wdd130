@@ -141,7 +141,7 @@ header {
     background-color: var(--secondary-color);
     color: var(--accent-color2);
     padding: 24px 0;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 }
