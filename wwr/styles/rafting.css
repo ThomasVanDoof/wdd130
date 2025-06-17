@@ -528,3 +528,17 @@ img[alt="Manager"] {
     display: block;
     margin: 1em auto;
 }
+
+.manager-images {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 2em 0;
+}
+
+.manager-images img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
