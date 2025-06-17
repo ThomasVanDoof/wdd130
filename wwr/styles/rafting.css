@@ -532,13 +532,16 @@ img[alt="Manager"] {
 .manager-images {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    align-items: flex-start;
+    gap: 32px;
     margin: 2em 0;
 }
 
 .manager-images img {
-    width: 120px;
-    height: auto;
+    height: 140px;
+    width: auto;
     border-radius: 8px;
     display: block;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
