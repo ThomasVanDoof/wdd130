@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles/rafting.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -45,11 +48,6 @@
                         Website Suggestion
                     </label>
                 </fieldset>
-                <p>
-
-
-
-                </p>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="3" required></textarea>
 
@@ -60,29 +58,50 @@
 
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
-            <p>Old Joe Rafting Co.</p>
+            <p>200 South 5090 East, Joe City, NY</p>
             <p>Phone: 123-456-7890</p>
             <p>Email: info@oldjoerafting.com</p>
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.96769528177!2d2.264633545212908!3d48.85882554203499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1749504616530!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            <img src="images/maneger.jpg" alt="Manager" />
         </main>
     <footer>
         <p>&copy; 2025 Old Joe Rafting Co. Thomas Todd Barney.</p>
         <nav>
             <a href="https://www.facebook.com/" target="_blank">
-                <img src="images/ew_facebook.png" alt="Facebook Icon" style="width: 20px; height: 20px;">
+                <img src="images/ew_facebook.png" alt="Facebook Icon">
             </a>
             <a href="https://www.instagram.com" target="_blank">
-                <img src="images/ew_instagram.png" alt="Instagram Icon" style="width: 20px; height: 20px;">
+                <img src="images/ew_instagram.png" alt="Instagram Icon">
             </a>
             <a href="https://www.twitter.com" target="_blank">
-                <img src="images/ew_X.png" alt="X Icon" style="width: 20px; height: 20px;">
+                <img src="images/ew_X.png" alt="X Icon">
             </a>
-            <a href="https://app.moqups.com/5okTX3tpne3fN1hyaYBnSWZGnoGxqKYn/view/page/ad64222d5" style="color: #c8ece8" target="_blank">
-            Moqups Wireframe
-            </a>
+            <a href="#" id="moqups-link">Wireframe</a>
         </nav>
     </footer>
+    <div id="moqups-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <img src="images/contact-wireframe.jpg" alt="Wireframe 1" class="modal-img">
+            <img src="images/contact-wireframe2.jpg" alt="Wireframe 2" class="modal-img">
+        </div>
+    </div>
+    <script>
+document.getElementById('moqups-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('moqups-modal').style.display = 'flex';
+});
+document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('moqups-modal').style.display = 'none';
+});
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('moqups-modal');
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+</script>
 </body>
 </html>

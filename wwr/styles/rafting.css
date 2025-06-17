@@ -1,9 +1,9 @@
 :root {
     --primary-color: #1d7874;
     --secondary-color: #071e22;
-    --accent-color: #EE2E31;
+    --accent-color: #4a417e;
     --accent-color2: #F4C095;
-    --text-color: #cae0e2;
+    --text-color: #ffffff;
 }
 
 
@@ -63,7 +63,7 @@ header, main {
 
 h1, h2 {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    color: var(#c3deeb);
+    
 }
 
 p {
@@ -115,7 +115,6 @@ social-links {
 .hero article {
     top: 60%;
     padding: 12px;
-    /* background-color: rgba(0, 0, 0, 0.3); */
     background-color: #ee2e31b2;
     font-size: 1.2em;
     margin: 30px;
@@ -141,11 +140,27 @@ footer {
     color: var(--text-color);
 }
 
-
+footer image {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
 footer nav a {
     margin: 0 10px;
     display: inline-block;
     text-decoration: none;
+}
+
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+
+footer nav a img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
 }
 
 .quadrant-grid {
@@ -334,7 +349,6 @@ footer nav a {
     transform: translateY(-2px) scale(1.04);
 }
 
-/* Add to rafting.css for trip cards grid styling */
 .trips-grid {
     display: flex;
     flex-direction: row;
@@ -343,7 +357,7 @@ footer nav a {
     margin: 2em auto;
     max-width: 1100px;
     padding: 0 1em;
-    flex-wrap: nowrap; /* Prevents wrapping to keep all cards in a single row */
+    flex-wrap: nowrap;
     overflow-x:auto;
 }
 
@@ -400,4 +414,117 @@ footer nav a {
 
 main h1 {
     color: #ffffff;
+}
+
+.contact-form {
+    background: linear-gradient(120deg, #4a417e 60%, #3498db 100%);
+    color: #eaf6ff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 2.5em 2em 2em 2em;
+    max-width: 500px;
+    margin: 2.5em auto;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form label,
+.contact-form legend {
+    font-weight: bold;
+    color: #f4c095;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+    font-size: 1em;
+    background: #eaf6ff;
+    color: #1d7874;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-bottom: 1em;
+    transition: box-shadow 0.2s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3498db;
+}
+
+.contact-form button[type="submit"] {
+    margin-top: 1em;
+    padding: 0.7em 2.2em;
+    background: linear-gradient(90deg, #ee2e31 60%, #d2701f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #d2701f 10%, #ee2e31 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+footer nav a[href*="moqups.com"] {
+    color: #ffe1f7 !important;
+}
+
+footer nav a#moqups-link {
+    color: #ffffff !important;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #222;
+    padding: 2em;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+}
+.modal-img {
+    max-width: 400px;
+    max-height: 60vh;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+img[alt="Manager"] {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1em auto;
 }
